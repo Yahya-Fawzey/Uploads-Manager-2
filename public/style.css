@@ -1,0 +1,76 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 600px;
+  margin: 2rem auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+input[type="file"] {
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+button {
+  background: #007BFF;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+#fileList {
+  margin-top: 2rem;
+}
+
+.file-entry {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f9f9f9;
+  margin-bottom: 8px;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.file-item {
+  color: #007BFF;
+  text-decoration: none;
+  flex-grow: 1;
+}
+
+.file-item:hover {
+  text-decoration: underline;
+}
+
+.delete-btn {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 4px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background: #a71d2a;
+}
+
+#message {
+  margin-top: 1rem;
+  color: green;
+}
