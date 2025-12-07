@@ -6,7 +6,7 @@ const path = require('path');
 const app = express();
 const PORT = 3000;
 
-// إعداد AWS
+// setting AWS
 const s3 = new AWS.S3({
   region: process.env.AWS_REGION,
   accessKeyId: process.env.AWS_ACCESS_KEY_ID,
@@ -15,14 +15,14 @@ const s3 = new AWS.S3({
 
 const BUCKET_NAME = process.env.S3_BUCKET_NAME;
 
-// إعداد multer للملفات من الذاكرة
+// storage
 const storage = multer.memoryStorage();
 const upload = multer({ storage });
 
-// تقديم ملفات الواجهة
+
 app.use(express.static('public'));
 
-// مسار رفع الملفات
+// uploaded files
 app.post('/upload', upload.single('file'), (req, res) => {
   const file = req.file;
   if (!file) return res.status(400).send('no file has been uploaded');
